@@ -11,7 +11,7 @@ namespace CSharpConsolePracticePad.Delegate
     //// Declare a delegate type.
     public delegate string StrMod(string str);
     class DelegateTest
-    {
+    { 
         // Replaces spaces with hyphens.
       internal  static string ReplaceSpaces(string s)
         {

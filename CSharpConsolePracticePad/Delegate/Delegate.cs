@@ -30,7 +30,7 @@ namespace CSharpConsolePracticePad.Delegate
         {
             string temp = "";
             int i;
-            Console.WriteLine("Removing spaces. sdsd");
+            Console.WriteLine("Removing spaces.");
             for (i = 0; i < s.Length; i++)
                 if (s[i] != ' ') temp += s[i];
             return temp;

@@ -9,74 +9,46 @@ namespace CSharpConsolePracticePad
 {
 
     //public  delegate string StrMod(string str);
-    public class Program
+    public partial class Program
     {
         static void Main(string[] args)
         {
             Program pOb = new Program();
-            //  pOb.DelegatePractice1();
-            pOb.DelegatePractice1MethodGroupConversion();
+
+
+            Console.WriteLine("Enter 1 Practicing Delegate");
+            int inputValue = Convert.ToInt32(Console.ReadLine());
+            if (inputValue == 1)
+            {
+                {
+                    pOb.ColorfulColor();
+                    Console.WriteLine("Delegate with  Static Method");
+                    pOb.DefaultColor();
+                    pOb.DelegatePracticeWithStaticMethod();
+                    pOb.ColorfulColor();
+                    Console.WriteLine("Delegate with Intance Method");
+                    pOb.DefaultColor();
+                    pOb.DelegatePracticeWithInstanceMthod();
+                    pOb.ColorfulColor();
+                    Console.WriteLine("Delegate with  Method Group Conversion");
+                    pOb.DefaultColor();
+                    pOb.DelegatePractice1MethodGroupConversion();
+                }
+            }
 
         }
 
-        public void DelegatePractice1()
+        public void DefaultColor() {
+
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+        public void ColorfulColor()
         {
-            // Construct a delegate.
-            StrMod strOp = new StrMod(DelegateTest.ReplaceSpaces);
-            string str;
-
-            // Call methods through the delegate.
-            str = strOp("This is a test.");
-            Console.WriteLine("Resulting string: " + str);
-            Console.WriteLine();
-
-            strOp = new StrMod(DelegateTest.RemoveSpaces);
-            str = strOp("This is a test.");
-            Console.WriteLine("Resulting string: " + str);
-            Console.WriteLine();
-            strOp = new StrMod(DelegateTest.Reverse);
-            str = strOp("This is a test.");
-            Console.WriteLine("Resulting string: " + str);
-
-            // Calling Intance Class 
-            Console.WriteLine("Calling Intance Class");
-            DelegateTest DlgOb = new DelegateTest();
-            strOp = new StrMod(DlgOb.ReplaceSpacesInsTanceMethod);
-            str = strOp("My name is Muhammad Adshikuzzaman");
             Console.BackgroundColor = ConsoleColor.Blue;
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.CursorSize = 10;
-            Console.WriteLine("My space replaced name is : " + str);
-            Console.WriteLine();
 
         }
-        public void DelegatePractice1MethodGroupConversion()
-        {
-            // Construct a delegate using method group conversion.
-            StrMod strOp = DelegateTest.ReplaceSpaces; // use method group conversion
-            string str;
-            // Call methods through the delegate.
-            str = strOp("This is a test.");
-            Console.WriteLine("Resulting string: " + str);
-            Console.WriteLine();
-            strOp = DelegateTest.RemoveSpaces; // use method group conversion
-            str = strOp("This is a test.");
-            Console.WriteLine("Resulting string: " + str);
-            Console.WriteLine();
-            strOp = DelegateTest.Reverse; // use method group conversion
-            str = strOp("This is a test.");
-            Console.WriteLine("Resulting string: " + str);
-            // Calling Intance Class 
-            Console.WriteLine("Calling Intance Class");
-            DelegateTest DlgOb = new DelegateTest();
-            strOp = DlgOb.ReplaceSpacesInsTanceMethod;
-            str = strOp("My name is Muhammad Adshikuzzaman");
-            Console.BackgroundColor = ConsoleColor.Blue;
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.CursorSize = 10;
-            Console.WriteLine("My space replaced name is : " + str);
-            Console.WriteLine();
-        } 
 
     }
 }

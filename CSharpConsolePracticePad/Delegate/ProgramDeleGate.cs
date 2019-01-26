@@ -79,29 +79,27 @@ namespace CSharpConsolePracticePad
         }
 
         public void DelegatePracticeMulticasting()
-        { 
-            // Construct a delegate using method group conversion.
-            StrMod strOp = DelegateTest.ReplaceSpaces; // use method group conversion
-            string str;
-            // Call methods through the delegate.
-            str = strOp("This is a test.");
+        {
+            // Construct delegates.
+            StrModMultiCast strOp;
+            StrModMultiCast replaceSp = DelegateTestMulticasting.ReplaceSpaces;
+            StrModMultiCast removeSp = DelegateTestMulticasting.RemoveSpaces;
+            StrModMultiCast reverseStr = DelegateTestMulticasting.Reverse;
+            string str = "This is a test";
+            // Set up multicast.
+            strOp = replaceSp;
+            strOp += reverseStr;
+            // Call multicast.
+            strOp(ref str);
             Console.WriteLine("Resulting string: " + str);
             Console.WriteLine();
-            strOp = DelegateTest.RemoveSpaces; // use method group conversion
-            str = strOp("This is a test.");
+            // Remove replace and add remove.
+            strOp -= replaceSp;
+            strOp += removeSp;
+            str = "This is a test."; // reset string
+                                     // Call multicast.
+            strOp(ref str);
             Console.WriteLine("Resulting string: " + str);
-            Console.WriteLine();
-            strOp = DelegateTest.Reverse; // use method group conversion
-            str = strOp("This is a test.");
-            Console.WriteLine("Resulting string: " + str);
-            // Calling Intance Class 
-            Console.WriteLine("Delegate  Method Group Conversion with Intance Class");
-            DelegateTest DlgOb = new DelegateTest();
-            strOp = DlgOb.ReplaceSpacesInsTanceMethod;
-            str = strOp("My name is Muhammad Adshikuzzaman");
-
-            Console.CursorSize = 10;
-            Console.WriteLine("My space replaced name is : " + str);
             Console.WriteLine();
         }
 

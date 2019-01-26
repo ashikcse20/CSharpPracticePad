@@ -10,7 +10,8 @@ namespace CSharpConsolePracticePad.Delegate
     //using System;
     //// Declare a delegate type.
     public delegate string StrMod(string str);
-    class DelegateTest
+    public delegate void StrModMultiCast(ref string str);
+    public  class DelegateTest
     { 
         // Replaces spaces with hyphens.
       internal  static string ReplaceSpaces(string s)
@@ -65,5 +66,34 @@ namespace CSharpConsolePracticePad.Delegate
         }*/
     }
 
+ public    class DelegateTestMulticasting
+    {
+        // Replaces spaces with hyphens.
+     public   static void ReplaceSpaces(ref string s)
+        {
+            Console.WriteLine("Replacing spaces with hyphens.");
+            s = s.Replace(' ', '-');
+        }
+        // Remove spaces.
+        public static void RemoveSpaces(ref string s)
+        {
+            string temp = "";
+            int i;
+            Console.WriteLine("Removing spaces.");
+            for (i = 0; i < s.Length; i++)
+                if (s[i] != ' ') temp += s[i];
+            s = temp;
+        }
 
+        // Reverse a string.
+        public static void Reverse(ref string s)
+        {
+            string temp = "";
+            int i, j;
+            Console.WriteLine("Reversing string.");
+            for (j = 0, i = s.Length - 1; i >= 0; i--, j++)
+                temp += s[i];
+            s = temp;
+        }
+    }
 }

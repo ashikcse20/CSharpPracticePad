@@ -18,27 +18,57 @@ namespace CSharpConsolePracticePad
 
             Console.WriteLine("Enter 1 Practicing Delegate");
             int inputValue = Convert.ToInt32(Console.ReadLine());
+            #region delegate Practice
             if (inputValue == 1)
             {
                 {
                     pOb.ColorfulColor();
-                    Console.WriteLine("Delegate with  Static Method");
+                    Console.WriteLine("Enter 1 for Practicing Delegate with  Static Method");
+                    Console.WriteLine("Enter 2 for Practicing Delegate with  Instance Method");
+                    Console.WriteLine("Enter 3 for Practicing Delegate with  Method Group Conversion");
+                    Console.WriteLine("Enter 4 for Practicing Delegate with Multicasting"); 
                     pOb.DefaultColor();
-                    pOb.DelegatePracticeWithStaticMethod();
-                    pOb.ColorfulColor();
-                    Console.WriteLine("Delegate with Intance Method");
-                    pOb.DefaultColor();
-                    pOb.DelegatePracticeWithInstanceMthod();
-                    pOb.ColorfulColor();
-                    Console.WriteLine("Delegate with  Method Group Conversion");
-                    pOb.DefaultColor();
-                    pOb.DelegatePracticeMethodGroupConversion();
+                    inputValue = Convert.ToInt32(Console.ReadLine());
+                    if (inputValue == 1)
+                    {
+                        pOb.ColorfulColor();
+                        Console.WriteLine("Delegate with  Static Method");
+                        pOb.DefaultColor();
+                        pOb.DelegatePracticeWithStaticMethod();
+                    }
+                    // inputValue = Convert.ToInt32(Console.ReadLine());
+                    if (inputValue == 2)
+                    {
+                        pOb.ColorfulColor();
+                        Console.WriteLine("Delegate with Intance Method");
+                        pOb.DefaultColor();
+                        pOb.DelegatePracticeWithInstanceMthod();
+                    }
+                    // inputValue = Convert.ToInt32(Console.ReadLine());
+                    if (inputValue == 3)
+                    {
+                        pOb.ColorfulColor();
+                        Console.WriteLine("Delegate with  Method Group Conversion");
+                        pOb.DefaultColor();
+                        pOb.DelegatePracticeMethodGroupConversion();
+                    }
+
+                    // inputValue = Convert.ToInt32(Console.ReadLine());
+                    if (inputValue == 4)
+                    {
+                        pOb.ColorfulColor();
+                        Console.WriteLine("Delegate Practice Multicasting ");
+                        pOb.DefaultColor();
+                        pOb.DelegatePracticeMulticasting();
+                    }
                 }
             }
+            #endregion delegate Practice  
 
         }
 
-        public void DefaultColor() {
+        public void DefaultColor()
+        {
 
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;

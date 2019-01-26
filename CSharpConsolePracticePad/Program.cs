@@ -32,7 +32,7 @@ namespace CSharpConsolePracticePad
                     pOb.ColorfulColor();
                     Console.WriteLine("Delegate with  Method Group Conversion");
                     pOb.DefaultColor();
-                    pOb.DelegatePractice1MethodGroupConversion();
+                    pOb.DelegatePracticeMethodGroupConversion();
                 }
             }
 

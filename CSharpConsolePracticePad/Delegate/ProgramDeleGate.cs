@@ -79,7 +79,7 @@ namespace CSharpConsolePracticePad
         }
 
         public void DelegatePracticeMulticasting()
-        {
+        { 
             // Construct a delegate using method group conversion.
             StrMod strOp = DelegateTest.ReplaceSpaces; // use method group conversion
             string str;

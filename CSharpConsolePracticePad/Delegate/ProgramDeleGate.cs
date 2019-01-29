@@ -10,9 +10,7 @@ namespace CSharpConsolePracticePad
 
     //public  delegate string StrMod(string str);
     public partial class Program
-    {
-     
-
+    { 
         public void DelegatePracticeWithStaticMethod()
         {
             // Construct a delegate.
@@ -68,7 +66,7 @@ namespace CSharpConsolePracticePad
             str = strOp("This is a test.");
             Console.WriteLine("Resulting string: " + str);
             // Calling Intance Class 
-            Console.WriteLine("Delegate  Method Group Conversion with Intance Class");
+            Console.WriteLine("Delegate  Method Group Conversion with Intance Method");
             DelegateTest DlgOb = new DelegateTest();
             strOp = DlgOb.ReplaceSpacesInsTanceMethod;
             str = strOp("My name is Muhammad Adshikuzzaman");
@@ -76,8 +74,7 @@ namespace CSharpConsolePracticePad
             Console.CursorSize = 10;
             Console.WriteLine("My space replaced name is : " + str);
             Console.WriteLine();
-        }
-
+        } 
         public void DelegatePracticeMulticasting()
         {
             // Construct delegates.

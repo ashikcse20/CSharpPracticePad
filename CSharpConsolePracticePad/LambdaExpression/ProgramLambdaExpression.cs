@@ -13,7 +13,14 @@ namespace CSharpConsolePracticePad
         {
             LambdaExpressionPractice.SimpleExpressionLambdaDemo();
         }
+        public void SimpleStatementLambdaDemo()
+        {
+            LambdaExpressionPractice.SimpleStatementLambdaDemo();
+        }
+        public void StatementLambdaVsStandaloneMethodDemo()
+        {
+            LambdaExpressionPractice.StatementLambdaVsStandaloneMethodDemo();
+        }
 
-         
     }
 }

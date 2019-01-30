@@ -70,7 +70,7 @@ namespace CSharpConsolePracticePad
             }
             #endregion delegate Practice  
             #region AnonymousMethods 
-            else if (inputValue == 2)
+            else if (inputValue == 2) 
             {
                 pOb.ColorfulColor();
                 Console.WriteLine("Enter 1 for Practicing Anonymous Method WithOut Parameter/Argument");

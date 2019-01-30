@@ -65,7 +65,7 @@ namespace CSharpConsolePracticePad
                         Console.WriteLine("Delegate Practice Multicasting "); 
                         pOb.DefaultColor();
                         pOb.DelegatePracticeMulticasting();
-                    }
+                    } 
                 }
             }
             #endregion delegate Practice  

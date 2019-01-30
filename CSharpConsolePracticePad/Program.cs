@@ -62,7 +62,7 @@ namespace CSharpConsolePracticePad
                     if (inputValue == 4)
                     {
                         pOb.ColorfulColor();
-                        Console.WriteLine("Delegate Practice Multicasting ");
+                        Console.WriteLine("Delegate Practice Multicasting "); 
                         pOb.DefaultColor();
                         pOb.DelegatePracticeMulticasting();
                     }

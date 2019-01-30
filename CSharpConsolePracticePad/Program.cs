@@ -66,7 +66,7 @@ namespace CSharpConsolePracticePad
                         pOb.DefaultColor();
                         pOb.DelegatePracticeMulticasting();
                     } 
-                }
+                } 
             }
             #endregion delegate Practice  
             #region AnonymousMethods 

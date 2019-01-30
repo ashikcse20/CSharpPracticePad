@@ -82,7 +82,9 @@ namespace CSharpConsolePracticePad
                 else if (inputValue == 2)
                     pOb.AnonymousMethodsWithParameterArgument();
                 else if (inputValue == 3)
+                {//C# 4.0:  The Complete Reference Page 424 //Use Outer Variables with Anonymous Methods
                     pOb.AnonymousMethodsWithOuterVariables();
+                }
             }
             #endregion AnonymousMethods 
         }

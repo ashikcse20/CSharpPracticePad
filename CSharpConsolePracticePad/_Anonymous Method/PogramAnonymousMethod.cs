@@ -24,10 +24,15 @@ namespace CSharpConsolePracticePad
         public void AnonymousMethodsWithOuterVariables()
         {
 
+             
             //CountItWithParamAndArg countIt = new CountItWithParamAndArg(Anonymousmethod.AnonymousMethodsWithOuterVariables());
             CountItWithParamAndArg countIt =  Anonymousmethod.AnonymousMethodsWithOuterVariables();
-            //int Result = countIt(10);
-           // Console.WriteLine("Summation of 10 is : " + Result);
+            int Result = countIt(3);
+            Console.WriteLine("Summation of 3 is : " + Result);
+
+             Result = countIt(5);
+            Console.WriteLine("Summation of 5 is : " + Result);
+            Console.WriteLine("As you can see, the count still proceeds normally. However, notice the summation value for 5.It shows 21 instead of 15!");
         }
 
     }

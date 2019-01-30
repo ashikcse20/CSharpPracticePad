@@ -62,15 +62,15 @@ namespace CSharpConsolePracticePad
                     if (inputValue == 4)
                     {
                         pOb.ColorfulColor();
-                        Console.WriteLine("Delegate Practice Multicasting ");
+                        Console.WriteLine("Delegate Practice Multicasting "); 
                         pOb.DefaultColor();
                         pOb.DelegatePracticeMulticasting();
-                    }
-                }
+                    } 
+                } 
             }
             #endregion delegate Practice  
             #region AnonymousMethods 
-            else if (inputValue == 2)
+            else if (inputValue == 2) 
             {
                 pOb.ColorfulColor();
                 Console.WriteLine("Enter 1 for Practicing Anonymous Method WithOut Parameter/Argument");
@@ -93,17 +93,17 @@ namespace CSharpConsolePracticePad
             {
                 pOb.ColorfulColor();
                 Console.WriteLine("Enter 1 for Practicing Simple Expression Lambda ");
-                Console.WriteLine("Enter 2 for Practicing Lambda Expression");
-                Console.WriteLine("Enter 3 for Practicing Lambda Expression");
+                Console.WriteLine("Enter 2 for Practicing Statement Lambda ");
+                Console.WriteLine("Enter 3 for Practicing Statement Lambda VS Standalone Methods");
                 inputValue = Convert.ToInt32(Console.ReadLine());
                 pOb.DefaultColor();
                 if (inputValue == 1)
                     pOb.SimpleExpressionLambdaDemo();
                 else if (inputValue == 2)
-                    pOb.AnonymousMethodsWithParameterArgument();
+                    pOb.SimpleStatementLambdaDemo();
                 else if (inputValue == 3)
                 {//C# 4.0:  The Complete Reference Page 424 //Use Outer Variables with Anonymous Methods
-                    pOb.AnonymousMethodsWithOuterVariables();
+                    pOb.StatementLambdaVsStandaloneMethodDemo();
                 }
             }
             #endregion AnonymousMethods 

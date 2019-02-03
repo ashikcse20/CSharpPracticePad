@@ -20,6 +20,7 @@ namespace CSharpConsolePracticePad
             Console.WriteLine("Enter 1 Practicing Delegate");
             Console.WriteLine("Enter 2 Practicing Anonymous Method");
             Console.WriteLine("Enter 3 Practicing Lambda Expression");
+            Console.WriteLine("Enter 4 Practicing Event");
             int inputValue = Convert.ToInt32(Console.ReadLine());
 
             pOb.DefaultColor();
@@ -94,7 +95,7 @@ namespace CSharpConsolePracticePad
                 pOb.ColorfulColor();
                 Console.WriteLine("Enter 1 for Practicing Simple Expression Lambda ");
                 Console.WriteLine("Enter 2 for Practicing Statement Lambda ");
-                Console.WriteLine("Enter 3 for Practicing Statement Lambda VS Standalone Methods");
+                Console.WriteLine("Enter 3 for Practicing Statement Lambda VS Standalone Methods"); 
                 inputValue = Convert.ToInt32(Console.ReadLine());
                 pOb.DefaultColor();
                 if (inputValue == 1)
@@ -107,6 +108,25 @@ namespace CSharpConsolePracticePad
                 }
             }
             #endregion AnonymousMethods 
+            #region Events 
+            else if (inputValue == 4)
+            {
+                pOb.ColorfulColor();
+                Console.WriteLine("Enter 1 for Practicing Event   ");
+                Console.WriteLine("Enter 2 for Practicing Event");
+                Console.WriteLine("Enter 3 for Practicing EventVS    ");
+                inputValue = Convert.ToInt32(Console.ReadLine());
+                pOb.DefaultColor();
+                if (inputValue == 1)
+                    pOb.SimpleExpressionLambdaDemo();
+                else if (inputValue == 2)
+                    pOb.SimpleStatementLambdaDemo();
+                else if (inputValue == 3)
+                {//C# 4.0:  The Complete Reference Page 424 //Use Outer Variables with Anonymous Methods
+                    pOb.StatementLambdaVsStandaloneMethodDemo();
+                }
+            }
+            #endregion Events 
         }
 
         public void DefaultColor()

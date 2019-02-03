@@ -105,7 +105,7 @@ namespace CSharpConsolePracticePad
                 else if (inputValue == 3)
                 {//C# 4.0:  The Complete Reference Page 424 //Use Outer Variables with Anonymous Methods
                     pOb.StatementLambdaVsStandaloneMethodDemo();
-                }
+                } 
             }
             #endregion AnonymousMethods 
             #region Events 

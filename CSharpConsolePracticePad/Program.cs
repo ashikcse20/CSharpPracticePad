@@ -95,7 +95,7 @@ namespace CSharpConsolePracticePad
                 pOb.ColorfulColor();
                 Console.WriteLine("Enter 1 for Practicing Simple Expression Lambda ");
                 Console.WriteLine("Enter 2 for Practicing Statement Lambda ");
-                Console.WriteLine("Enter 3 for Practicing Statement Lambda VS Standalone Methods");
+                Console.WriteLine("Enter 3 for Practicing Statement Lambda VS Standalone Methods"); 
                 inputValue = Convert.ToInt32(Console.ReadLine());
                 pOb.DefaultColor();
                 if (inputValue == 1)

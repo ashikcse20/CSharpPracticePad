@@ -90,7 +90,7 @@ namespace CSharpConsolePracticePad
             }
             #endregion AnonymousMethods 
             #region LambdaExpression 
-            else if (inputValue == 3)
+            else if (inputValue == 3) 
             {
                 pOb.ColorfulColor();
                 Console.WriteLine("Enter 1 for Practicing Simple Expression Lambda ");

@@ -110,7 +110,7 @@ namespace CSharpConsolePracticePad
             #endregion AnonymousMethods 
             #region Events 
             else if (inputValue == 4)
-            {
+            {   // Events task wasn't Done intentionally 
                 pOb.ColorfulColor();
                 Console.WriteLine("Enter 1 for Practicing Event   ");
                 Console.WriteLine("Enter 2 for Practicing Event");
